@@ -3,7 +3,7 @@ from typing import Tuple
 import datetime
 
 import discord
-from coffee_counter import CoffeeCounter
+from coffee_counter2 import CoffeeCounter
 
 client = discord.Client()
 

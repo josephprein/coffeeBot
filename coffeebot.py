@@ -13,8 +13,6 @@ timezone = datetime.timezone(datetime.timedelta(hours = -10))
 
 @client.event
 async def on_ready():
-    print('We have logged in as {0.user}'.format(client))
-    print(str(datetime.datetime.now(tz=timezone).hour))
     for guild in client.guilds:
         for member in guild.members:
             coffeeList.append(CoffeeCounter(member=member, count=0))
@@ -24,7 +22,6 @@ async def on_ready():
 
     day = datetime.datetime.now(tz=timezone).day
     last_day = day
-    print(str(last_day))
 
 @client.event
 async def on_message(message):
